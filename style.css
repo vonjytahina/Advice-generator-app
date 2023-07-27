@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-neon-green: hsl(150, 100%, 66%);
+
+  --neutral-grayish-blue: hsl(217, 19%, 38%);
+  --neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --neutral-dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+}
+
+.container {
+  width: 1440px;
+  height: 900px;
+  margin: 0px auto;
+  background: var(--neutral-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  margin: 20px auto 5px;
+}
+
+.attribution a {
+  font-size: 12px;
+}
+
+.app {
+  width: 550px;
+  height: auto;
+  background: var(--neutral-dark-grayish-blue);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 50px 50px;
+  position: relative;
+}
+
+.app h3 {
+  color: var(--primary-neon-green);
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+blockquote {
+  text-align: center;
+  color: var(--primary-light-cyan);
+  quotes: "“" "”" "‘" "’";
+  margin: 20px 0px 30px 0px;
+}
+
+.divider-desktop {
+  margin-bottom: 10px;
+}
+
+.divider-mobile {
+  margin-bottom: 20px;
+  display: none;
+}
+
+.app .dice {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: var(--primary-neon-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.app .dice:hover {
+  box-shadow: 0px 0px 15px 15px rgba(82, 255, 168, 0.3);
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+    height: 750px;
+    border: none;
+    overflow: hidden;
+  }
+
+  .app {
+    width: 340px;
+    padding: 40px 20px;
+
+  }
+
+  .app h3 {
+    font-size: 12px;
+  }
+
+  blockquote {
+    font-size: 24px;
+  }
+
+  .divider-desktop {
+    display: none;
+  }
+
+  .divider-mobile {
+    display: block;
+  }
+
+  .separator svg {
+    transform: scale(.5);
+  }
+
+
+  .attribution {
+    margin: 20px 0px 5px 0px;
+    font-size: 12px;
+  }
+
+  .attribution a {
+    font-size: 12px;
+  }
+}
